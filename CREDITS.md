@@ -1,7 +1,7 @@
 # Biome Postcards credits
 
 A Minecraft Bedrock add-on by **Tacoparoni**.
-Official page, downloads and wiki: https://tarcoparoni.ropmuang.workers.dev/biome-postcards
+Official page, downloads and wiki: https://tacoparoni.com/biome-postcards
 
 ## Team
 
@@ -13,7 +13,7 @@ Official page, downloads and wiki: https://tarcoparoni.ropmuang.workers.dev/biom
 ## How it was made
 
 - Scripts use the stable Minecraft Script API only (`@minecraft/server`, `@minecraft/server-ui`).
-- Follow Tacoparoni for what we make next: https://tarcoparoni.ropmuang.workers.dev/our-mods (Discord link on the site).
+- Follow Tacoparoni for what we make next: https://tacoparoni.com/our-mods (Discord link on the site).
 
 ## Tools
 

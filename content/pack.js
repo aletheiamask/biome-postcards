@@ -7,7 +7,7 @@ export const PACK = {
   formatVersion: "1.26.50",
   authors: ["Tacoparoni", "Marwin5411-Winner", "pipothai"],
   license: "All Rights Reserved",
-  url: "https://tarcoparoni.ropmuang.workers.dev/biome-postcards",
+  url: "https://tacoparoni.com/biome-postcards",
   modules: { "@minecraft/server": "2.10.0", "@minecraft/server-ui": "2.2.0" },
   uuids: {
     bp: "f4e07b0c-b0fd-4c76-8a82-0a080ce25151",

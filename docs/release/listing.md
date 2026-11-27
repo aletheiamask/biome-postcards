@@ -13,8 +13,9 @@ Paste-ready text for the project page. Keep it in sync with `README.md` and the 
 | Summary (max ~120 chars) | Walk into a new biome and get its postcard. Keep 31 postcards in an album and pin them on your wall. |
 | Game versions | 1.26.50 and newer (tested on 1.26.63) |
 | License | All Rights Reserved (custom, see `LICENSE`) |
-| Website | https://tarcoparoni.ropmuang.workers.dev/biome-postcards |
-| Wiki | https://tarcoparoni.ropmuang.workers.dev/biome-postcards/wiki |
+| Website | https://tacoparoni.com/biome-postcards |
+| Wiki | https://tacoparoni.com/biome-postcards/wiki |
+| Source | https://github.com/aletheiamask/biome-postcards |
 | Issues / support | Tacoparoni Discord (link on the website) |
 | Authors | Marwin5411-Winner, pipothai (Tacoparoni) |
 | File | `dist/BiomePostcards-1.0.0.mcaddon` (same file as on the website; the SHA-256 must match) |
@@ -84,9 +85,9 @@ Tested on Windows and Bedrock Dedicated Server 1.26.63. Mobile and consoles use 
 
 Made by **Tacoparoni**: Marwin5411-Winner and pipothai.
 
-Full guide and every system in detail: [Wiki](https://tarcoparoni.ropmuang.workers.dev/biome-postcards/wiki)
+Full guide and every system in detail: [Wiki](https://tacoparoni.com/biome-postcards/wiki)
 
-Thanks for playing! Follow Tacoparoni on Discord and on our website for what we make next: https://tarcoparoni.ropmuang.workers.dev/our-mods
+Thanks for playing! Follow Tacoparoni on Discord and on our website for what we make next: https://tacoparoni.com/our-mods
 
 © 2026 Tacoparoni. All Rights Reserved. Free to download and play, on your own worlds, Realms and servers, and to show in videos. Please do not reupload the files or put them behind paid links. Link to this page or to the official website instead.
 

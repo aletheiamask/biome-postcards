@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- The official page moved to https://tacoparoni.com/biome-postcards. The pack manifests, `CREDITS`, `LICENSE` and `README` point there. The old address still works but is no longer updated
+
 ## 1.0.1 (11 Nov 2026) model fixes
 
 Fixes to the 3D block models. Nothing else changed: same ids, same saves, same recipes. Checked in the game client on 11 Nov 2026.

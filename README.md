@@ -18,7 +18,8 @@ Walk into a biome for the first time and a postcard goes into your album, with t
 |---|---|
 | Game | Minecraft Bedrock 26.50 or newer (tested on 1.26.63) |
 | Version | 1.0.1 |
-| Website | <https://tarcoparoni.ropmuang.workers.dev/biome-postcards> (downloads and wiki) |
+| Website | <https://tacoparoni.com/biome-postcards> (downloads and wiki) |
+| CurseForge | <https://www.curseforge.com/minecraft-bedrock/addons/biome-postcards> |
 | License | All Rights Reserved. Free to download and play, see `LICENSE` |
 | Script API | stable only: `@minecraft/server` 2.10.0, `@minecraft/server-ui` 2.2.0. No Beta APIs, no experiments |
 | Size | about 200 KB |
