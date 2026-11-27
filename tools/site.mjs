@@ -1,5 +1,5 @@
 // ส่งข้อมูลและไฟล์ของแอดออนไปให้เว็บ Tacoparoni (หน้า /biome-postcards และ wiki)
-// ใช้: node tools/site.mjs <โฟลเดอร์ repo ของเว็บ>   (ค่าเริ่มต้น ../tacoparoni-site)
+// ใช้: node tools/site.mjs <โฟลเดอร์ repo ของเว็บ>   (ค่าเริ่มต้น ../Tacoparoni/site)
 // รันหลัง `node tools/build.mjs --pack --release` ทุกครั้งที่ปล่อยเวอร์ชันใหม่ แล้วเพิ่มแถวใน src/lib/releases.ts ของเว็บ
 // สิ่งที่เขียน: src/lib/bpc-data.json, public/assets/bpc/**, public/downloads/biome-postcards/BiomePostcards-<ver>.mcaddon
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -10,7 +10,7 @@ import * as T from "../content/cards.js";
 import { PACK } from "../content/pack.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SITE = resolve(process.argv[2] ?? join(ROOT, "..", "tacoparoni-site"));
+const SITE = resolve(process.argv[2] ?? join(ROOT, "..", "Tacoparoni", "site"));
 if (!existsSync(join(SITE, "src/lib/site.ts"))) {
   console.error(`site: ไม่พบ repo ของเว็บที่ ${SITE}`);
   process.exit(1);
