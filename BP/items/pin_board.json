@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:pin_board",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_pin_board"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:pin_board.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:pin_board",
+        "replace_block_item": true
+      }
+    }
+  }
+}

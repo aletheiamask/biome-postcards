@@ -1,0 +1,52 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Biome Postcards Resources",
+    "description": "Collect a postcard from every biome. By Tacoparoni (Marwin5411-Winner, pipothai).",
+    "uuid": "258846a1-89e5-4570-b214-12c8796aa681",
+    "version": [
+      1,
+      0,
+      1
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "850820a8-75b7-45ce-8cfe-976bfd9e0207",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "f4e07b0c-b0fd-4c76-8a82-0a080ce25151",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "capabilities": [
+    "pbr"
+  ],
+  "metadata": {
+    "authors": [
+      "Tacoparoni",
+      "Marwin5411-Winner",
+      "pipothai"
+    ],
+    "license": "All Rights Reserved",
+    "url": "https://tarcoparoni.ropmuang.workers.dev/biome-postcards",
+    "product_type": "addon"
+  }
+}

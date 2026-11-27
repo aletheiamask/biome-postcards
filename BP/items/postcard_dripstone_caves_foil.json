@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:postcard_dripstone_caves_foil",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_postcard_dripstone_caves_foil"
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "item.bpc:postcard_dripstone_caves_foil"
+      },
+      "minecraft:tags": {
+        "tags": [
+          "bpc:postcard"
+        ]
+      },
+      "minecraft:glint": true
+    }
+  }
+}

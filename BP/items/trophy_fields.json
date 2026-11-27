@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:trophy_fields",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_trophy_fields"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:trophy_fields.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:trophy_fields",
+        "replace_block_item": true
+      }
+    }
+  }
+}

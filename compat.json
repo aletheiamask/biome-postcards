@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "about": "Biome Postcards compatibility results pinned to exact versions. Re-test a row only when one of its versions changes. Evidence commands are in tools/bds.mjs.",
+  "entries": [
+    {
+      "id": "minecraft-bedrock-dedicated-server",
+      "kind": "game",
+      "version": "1.26.63.1",
+      "scriptApi": {
+        "@minecraft/server": "2.10.0",
+        "@minecraft/server-ui": "2.2.0"
+      },
+      "ours": {
+        "biome-postcards": "0.9.0"
+      },
+      "date": "2026-11-10",
+      "result": "pass",
+      "checked": "packs load with no content-log warnings; 87 biome ids all known to the game; simulated players: first postcard + album, no duplicates, 7 surface biomes incl. dappled_forest and pale_garden, 4 underground biomes incl. sulfur_caves, Nether, The End, foil at night, 4 players with separate progress, death keeps the album; Pin Board pin/unpin/foil/break by player, explosion, setblock, fill, script, piston; owner lock on tap, break and explosion; selftest 9/9",
+      "evidence": "node tools/bds.mjs setup --testpack=gametest --fresh, then run the suites probe, board, use, lock, discovery, caves, multi, death (log in .dev/bds-last.log)",
+      "notes": "The server does not load resource packs. Client-side parts were checked in the game client."
+    },
+    {
+      "id": "minecraft-bedrock-dedicated-server",
+      "kind": "game",
+      "version": "1.26.63.1",
+      "scriptApi": {
+        "@minecraft/server": "2.10.0",
+        "@minecraft/server-ui": "2.2.0"
+      },
+      "ours": {
+        "biome-postcards": "0.10.0"
+      },
+      "date": "2026-11-10",
+      "result": "pass",
+      "checked": "re-tested what 0.10.0 changed (notification queue, form guard, album slots): packs load with no content-log warnings from the add-on; discovery suite (discoveries go to the album, only the album item lands in the inventory, no duplicates, an empty slot is refilled once on revisit, foil at night turns the slot foil, Nether, The End, selftest 9/9); multi (4 players, separate albums, nothing in inventories); death (nothing from the add-on drops, album kept, slot survives); caves (4 underground biomes); use (album, postcard, souvenir stand). Suites board and lock were not re-run because their code did not change",
+      "evidence": "node tools/bds.mjs setup --testpack=gametest --fresh, then run use, discovery, multi, death, caves (log in .dev/bds-last.log)",
+      "notes": "The discovery suite also tries the 4 underground biomes at surface height and logs 4 FAIL lines for them; that is the test's position, and the caves suite covers those biomes at the right depth."
+    },
+    {
+      "id": "minecraft-bedrock-dedicated-server",
+      "kind": "game",
+      "version": "1.26.63.1",
+      "scriptApi": {
+        "@minecraft/server": "2.10.0",
+        "@minecraft/server-ui": "2.2.0"
+      },
+      "ours": {
+        "biome-postcards": "1.0.0"
+      },
+      "date": "2026-11-11",
+      "result": "pass",
+      "checked": "1.0.0 differs from 0.10.0 only in the version number, pack description, manifest metadata (licence, url) and the LICENSE/CREDITS files inside the packs. Before the version change, on the same code: suites board, use, lock (with ownerLock on), caves, multi, death all pass; discovery passes except the 4 known surface-height lines for underground biomes. With 1.0.0: both packs load and the showcase world builds with 0 WARN/ERROR lines from the add-on",
+      "evidence": "npm run bds -- showcase (11 Nov 2026), earlier suites in .dev/bds-last.log",
+      "notes": "testpack/scripts/sim.js spawn() now re-places the floor once the chunk has loaded; earlier board/lock failures on a fresh world were the harness, not the add-on."
+    },
+    {
+      "id": "minecraft-bedrock-windows-client",
+      "kind": "game",
+      "version": "1.26.63",
+      "ours": {
+        "biome-postcards": "0.9.0"
+      },
+      "date": "2026-11-10",
+      "result": "pass",
+      "checked": "owner's check on 10 Nov 2026 in the showcase world: album and the other forms open, Pin Boards in 4 directions, wall of 37 postcards with no missing texture, Thai text after turning the resource pack on in Global Resources",
+      "evidence": "dist/BiomePostcards-Showcase.mcworld",
+      "notes": "Not reported in this check: Vibrant Visuals and mobile. A blank screen on using the album was reported once before this check and did not come back."
+    },
+    {
+      "id": "minecraft-bedrock-windows-client",
+      "kind": "game",
+      "version": "1.26.63",
+      "ours": {
+        "biome-postcards": "0.10.0"
+      },
+      "date": "2026-11-11",
+      "result": "pass",
+      "checked": "checked on 11 Nov 2026 by driving the local game client (tools/look.mjs game), English and Thai: the 12 notification cards of /bpc:demo with corner banner, slide timing and foil card; plain /title still in the middle of the screen; /bpc:toast more queue; no red pack-error line and no item schema errors on world join; album opens from the item with the owner line, postcard hint on use; 14 block models (Pin Board, Souvenir Stand, 12 decorations) from several angles; decorations face the player in 4 directions; placing a Pin Board from its item and pinning a postcard; held Pin Board item is a flat icon",
+      "evidence": "node tools/look.mjs game … (screenshots in .dev/shots, not committed)",
+      "notes": "Not checked in the client: album pages beyond the first (take out, put back, copy, sets), the settings form toggle, mobile, consoles, Realms, Vibrant Visuals. The owner has not repeated this check yet."
+    },
+    {
+      "id": "other-biome-addons",
+      "kind": "addon",
+      "version": "",
+      "ours": {
+        "biome-postcards": "0.9.0"
+      },
+      "date": "2026-11-10",
+      "result": "untested",
+      "checked": "",
+      "evidence": "test/discovery.test.js (mock): unknown biome ids give a Mysterious Land card",
+      "notes": "No third-party biome add-on has been tested in the game yet. Add one row per add-on and version when tested. From 0.10.0 the add-on wraps the HUD title control; resource packs that replace hud_title_text_area make the notification cards fall back to plain title text (not tested with any pack yet)."
+    }
+  ]
+}

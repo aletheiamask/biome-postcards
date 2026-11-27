@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:postcard_mountain_peaks",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_postcard_mountain_peaks"
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "item.bpc:postcard_mountain_peaks"
+      },
+      "minecraft:tags": {
+        "tags": [
+          "bpc:postcard"
+        ]
+      }
+    }
+  }
+}

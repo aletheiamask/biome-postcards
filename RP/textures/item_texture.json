@@ -1,0 +1,258 @@
+{
+  "resource_pack_name": "bpc",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "bpc_postcard_plains": {
+      "textures": "textures/items/postcards/plains"
+    },
+    "bpc_postcard_plains_foil": {
+      "textures": "textures/items/postcards/plains_foil"
+    },
+    "bpc_postcard_forest": {
+      "textures": "textures/items/postcards/forest"
+    },
+    "bpc_postcard_forest_foil": {
+      "textures": "textures/items/postcards/forest_foil"
+    },
+    "bpc_postcard_flower_forest": {
+      "textures": "textures/items/postcards/flower_forest"
+    },
+    "bpc_postcard_flower_forest_foil": {
+      "textures": "textures/items/postcards/flower_forest_foil"
+    },
+    "bpc_postcard_dark_forest": {
+      "textures": "textures/items/postcards/dark_forest"
+    },
+    "bpc_postcard_dark_forest_foil": {
+      "textures": "textures/items/postcards/dark_forest_foil"
+    },
+    "bpc_postcard_pale_garden": {
+      "textures": "textures/items/postcards/pale_garden"
+    },
+    "bpc_postcard_pale_garden_foil": {
+      "textures": "textures/items/postcards/pale_garden_foil"
+    },
+    "bpc_postcard_cherry_grove": {
+      "textures": "textures/items/postcards/cherry_grove"
+    },
+    "bpc_postcard_cherry_grove_foil": {
+      "textures": "textures/items/postcards/cherry_grove_foil"
+    },
+    "bpc_postcard_meadow": {
+      "textures": "textures/items/postcards/meadow"
+    },
+    "bpc_postcard_meadow_foil": {
+      "textures": "textures/items/postcards/meadow_foil"
+    },
+    "bpc_postcard_dappled_forest": {
+      "textures": "textures/items/postcards/dappled_forest"
+    },
+    "bpc_postcard_dappled_forest_foil": {
+      "textures": "textures/items/postcards/dappled_forest_foil"
+    },
+    "bpc_postcard_taiga": {
+      "textures": "textures/items/postcards/taiga"
+    },
+    "bpc_postcard_taiga_foil": {
+      "textures": "textures/items/postcards/taiga_foil"
+    },
+    "bpc_postcard_snowy_lands": {
+      "textures": "textures/items/postcards/snowy_lands"
+    },
+    "bpc_postcard_snowy_lands_foil": {
+      "textures": "textures/items/postcards/snowy_lands_foil"
+    },
+    "bpc_postcard_ice_spikes": {
+      "textures": "textures/items/postcards/ice_spikes"
+    },
+    "bpc_postcard_ice_spikes_foil": {
+      "textures": "textures/items/postcards/ice_spikes_foil"
+    },
+    "bpc_postcard_mountain_peaks": {
+      "textures": "textures/items/postcards/mountain_peaks"
+    },
+    "bpc_postcard_mountain_peaks_foil": {
+      "textures": "textures/items/postcards/mountain_peaks_foil"
+    },
+    "bpc_postcard_windswept_hills": {
+      "textures": "textures/items/postcards/windswept_hills"
+    },
+    "bpc_postcard_windswept_hills_foil": {
+      "textures": "textures/items/postcards/windswept_hills_foil"
+    },
+    "bpc_postcard_desert": {
+      "textures": "textures/items/postcards/desert"
+    },
+    "bpc_postcard_desert_foil": {
+      "textures": "textures/items/postcards/desert_foil"
+    },
+    "bpc_postcard_savanna": {
+      "textures": "textures/items/postcards/savanna"
+    },
+    "bpc_postcard_savanna_foil": {
+      "textures": "textures/items/postcards/savanna_foil"
+    },
+    "bpc_postcard_badlands": {
+      "textures": "textures/items/postcards/badlands"
+    },
+    "bpc_postcard_badlands_foil": {
+      "textures": "textures/items/postcards/badlands_foil"
+    },
+    "bpc_postcard_jungle": {
+      "textures": "textures/items/postcards/jungle"
+    },
+    "bpc_postcard_jungle_foil": {
+      "textures": "textures/items/postcards/jungle_foil"
+    },
+    "bpc_postcard_bamboo_jungle": {
+      "textures": "textures/items/postcards/bamboo_jungle"
+    },
+    "bpc_postcard_bamboo_jungle_foil": {
+      "textures": "textures/items/postcards/bamboo_jungle_foil"
+    },
+    "bpc_postcard_swamp": {
+      "textures": "textures/items/postcards/swamp"
+    },
+    "bpc_postcard_swamp_foil": {
+      "textures": "textures/items/postcards/swamp_foil"
+    },
+    "bpc_postcard_mangrove_swamp": {
+      "textures": "textures/items/postcards/mangrove_swamp"
+    },
+    "bpc_postcard_mangrove_swamp_foil": {
+      "textures": "textures/items/postcards/mangrove_swamp_foil"
+    },
+    "bpc_postcard_mushroom_fields": {
+      "textures": "textures/items/postcards/mushroom_fields"
+    },
+    "bpc_postcard_mushroom_fields_foil": {
+      "textures": "textures/items/postcards/mushroom_fields_foil"
+    },
+    "bpc_postcard_beach": {
+      "textures": "textures/items/postcards/beach"
+    },
+    "bpc_postcard_beach_foil": {
+      "textures": "textures/items/postcards/beach_foil"
+    },
+    "bpc_postcard_ocean": {
+      "textures": "textures/items/postcards/ocean"
+    },
+    "bpc_postcard_ocean_foil": {
+      "textures": "textures/items/postcards/ocean_foil"
+    },
+    "bpc_postcard_frozen_ocean": {
+      "textures": "textures/items/postcards/frozen_ocean"
+    },
+    "bpc_postcard_frozen_ocean_foil": {
+      "textures": "textures/items/postcards/frozen_ocean_foil"
+    },
+    "bpc_postcard_lush_caves": {
+      "textures": "textures/items/postcards/lush_caves"
+    },
+    "bpc_postcard_lush_caves_foil": {
+      "textures": "textures/items/postcards/lush_caves_foil"
+    },
+    "bpc_postcard_dripstone_caves": {
+      "textures": "textures/items/postcards/dripstone_caves"
+    },
+    "bpc_postcard_dripstone_caves_foil": {
+      "textures": "textures/items/postcards/dripstone_caves_foil"
+    },
+    "bpc_postcard_deep_dark": {
+      "textures": "textures/items/postcards/deep_dark"
+    },
+    "bpc_postcard_deep_dark_foil": {
+      "textures": "textures/items/postcards/deep_dark_foil"
+    },
+    "bpc_postcard_nether": {
+      "textures": "textures/items/postcards/nether"
+    },
+    "bpc_postcard_nether_foil": {
+      "textures": "textures/items/postcards/nether_foil"
+    },
+    "bpc_postcard_nether_forests": {
+      "textures": "textures/items/postcards/nether_forests"
+    },
+    "bpc_postcard_nether_forests_foil": {
+      "textures": "textures/items/postcards/nether_forests_foil"
+    },
+    "bpc_postcard_the_end": {
+      "textures": "textures/items/postcards/the_end"
+    },
+    "bpc_postcard_the_end_foil": {
+      "textures": "textures/items/postcards/the_end_foil"
+    },
+    "bpc_postcard_sulfur_caves": {
+      "textures": "textures/items/postcards/sulfur_caves"
+    },
+    "bpc_postcard_sulfur_caves_foil": {
+      "textures": "textures/items/postcards/sulfur_caves_foil"
+    },
+    "bpc_postcard_mystery": {
+      "textures": "textures/items/postcards/mystery"
+    },
+    "bpc_postcard_ice_caves": {
+      "textures": "textures/items/postcards/ice_caves"
+    },
+    "bpc_postcard_ice_caves_foil": {
+      "textures": "textures/items/postcards/ice_caves_foil"
+    },
+    "bpc_postcard_fest_new_year": {
+      "textures": "textures/items/postcards/fest_new_year"
+    },
+    "bpc_postcard_fest_songkran": {
+      "textures": "textures/items/postcards/fest_songkran"
+    },
+    "bpc_postcard_fest_midyear": {
+      "textures": "textures/items/postcards/fest_midyear"
+    },
+    "bpc_postcard_fest_halloween": {
+      "textures": "textures/items/postcards/fest_halloween"
+    },
+    "bpc_album": {
+      "textures": "textures/items/album"
+    },
+    "bpc_blank_postcard": {
+      "textures": "textures/items/blank_postcard"
+    },
+    "bpc_pin_board": {
+      "textures": "textures/items/pin_board"
+    },
+    "bpc_trophy_forests": {
+      "textures": "textures/blocks/decor/trophy_forests"
+    },
+    "bpc_trophy_cold": {
+      "textures": "textures/blocks/decor/trophy_cold"
+    },
+    "bpc_trophy_dry": {
+      "textures": "textures/blocks/decor/trophy_dry"
+    },
+    "bpc_trophy_wet": {
+      "textures": "textures/blocks/decor/trophy_wet"
+    },
+    "bpc_trophy_fields": {
+      "textures": "textures/blocks/decor/trophy_fields"
+    },
+    "bpc_trophy_underground": {
+      "textures": "textures/blocks/decor/trophy_underground"
+    },
+    "bpc_trophy_otherworld": {
+      "textures": "textures/blocks/decor/trophy_otherworld"
+    },
+    "bpc_traveler_globe": {
+      "textures": "textures/blocks/decor/traveler_globe"
+    },
+    "bpc_souvenir_snow_globe": {
+      "textures": "textures/blocks/decor/souvenir_snow_globe"
+    },
+    "bpc_souvenir_cactus_pot": {
+      "textures": "textures/blocks/decor/souvenir_cactus_pot"
+    },
+    "bpc_souvenir_shell_jar": {
+      "textures": "textures/blocks/decor/souvenir_shell_jar"
+    },
+    "bpc_souvenir_golden_compass": {
+      "textures": "textures/blocks/decor/souvenir_golden_compass"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:souvenir_snow_globe",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_souvenir_snow_globe"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:souvenir_snow_globe.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:souvenir_snow_globe",
+        "replace_block_item": true
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:postcard_the_end",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_postcard_the_end"
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "item.bpc:postcard_the_end"
+      },
+      "minecraft:tags": {
+        "tags": [
+          "bpc:postcard"
+        ]
+      }
+    }
+  }
+}

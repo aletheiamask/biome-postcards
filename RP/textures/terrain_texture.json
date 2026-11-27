@@ -1,0 +1,260 @@
+{
+  "resource_pack_name": "bpc",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "bpc_board_plains": {
+      "textures": "textures/blocks/pin_board/plains"
+    },
+    "bpc_board_plains_foil": {
+      "textures": "textures/blocks/pin_board/plains_foil"
+    },
+    "bpc_board_forest": {
+      "textures": "textures/blocks/pin_board/forest"
+    },
+    "bpc_board_forest_foil": {
+      "textures": "textures/blocks/pin_board/forest_foil"
+    },
+    "bpc_board_flower_forest": {
+      "textures": "textures/blocks/pin_board/flower_forest"
+    },
+    "bpc_board_flower_forest_foil": {
+      "textures": "textures/blocks/pin_board/flower_forest_foil"
+    },
+    "bpc_board_dark_forest": {
+      "textures": "textures/blocks/pin_board/dark_forest"
+    },
+    "bpc_board_dark_forest_foil": {
+      "textures": "textures/blocks/pin_board/dark_forest_foil"
+    },
+    "bpc_board_pale_garden": {
+      "textures": "textures/blocks/pin_board/pale_garden"
+    },
+    "bpc_board_pale_garden_foil": {
+      "textures": "textures/blocks/pin_board/pale_garden_foil"
+    },
+    "bpc_board_cherry_grove": {
+      "textures": "textures/blocks/pin_board/cherry_grove"
+    },
+    "bpc_board_cherry_grove_foil": {
+      "textures": "textures/blocks/pin_board/cherry_grove_foil"
+    },
+    "bpc_board_meadow": {
+      "textures": "textures/blocks/pin_board/meadow"
+    },
+    "bpc_board_meadow_foil": {
+      "textures": "textures/blocks/pin_board/meadow_foil"
+    },
+    "bpc_board_dappled_forest": {
+      "textures": "textures/blocks/pin_board/dappled_forest"
+    },
+    "bpc_board_dappled_forest_foil": {
+      "textures": "textures/blocks/pin_board/dappled_forest_foil"
+    },
+    "bpc_board_taiga": {
+      "textures": "textures/blocks/pin_board/taiga"
+    },
+    "bpc_board_taiga_foil": {
+      "textures": "textures/blocks/pin_board/taiga_foil"
+    },
+    "bpc_board_snowy_lands": {
+      "textures": "textures/blocks/pin_board/snowy_lands"
+    },
+    "bpc_board_snowy_lands_foil": {
+      "textures": "textures/blocks/pin_board/snowy_lands_foil"
+    },
+    "bpc_board_ice_spikes": {
+      "textures": "textures/blocks/pin_board/ice_spikes"
+    },
+    "bpc_board_ice_spikes_foil": {
+      "textures": "textures/blocks/pin_board/ice_spikes_foil"
+    },
+    "bpc_board_mountain_peaks": {
+      "textures": "textures/blocks/pin_board/mountain_peaks"
+    },
+    "bpc_board_mountain_peaks_foil": {
+      "textures": "textures/blocks/pin_board/mountain_peaks_foil"
+    },
+    "bpc_board_windswept_hills": {
+      "textures": "textures/blocks/pin_board/windswept_hills"
+    },
+    "bpc_board_windswept_hills_foil": {
+      "textures": "textures/blocks/pin_board/windswept_hills_foil"
+    },
+    "bpc_board_desert": {
+      "textures": "textures/blocks/pin_board/desert"
+    },
+    "bpc_board_desert_foil": {
+      "textures": "textures/blocks/pin_board/desert_foil"
+    },
+    "bpc_board_savanna": {
+      "textures": "textures/blocks/pin_board/savanna"
+    },
+    "bpc_board_savanna_foil": {
+      "textures": "textures/blocks/pin_board/savanna_foil"
+    },
+    "bpc_board_badlands": {
+      "textures": "textures/blocks/pin_board/badlands"
+    },
+    "bpc_board_badlands_foil": {
+      "textures": "textures/blocks/pin_board/badlands_foil"
+    },
+    "bpc_board_jungle": {
+      "textures": "textures/blocks/pin_board/jungle"
+    },
+    "bpc_board_jungle_foil": {
+      "textures": "textures/blocks/pin_board/jungle_foil"
+    },
+    "bpc_board_bamboo_jungle": {
+      "textures": "textures/blocks/pin_board/bamboo_jungle"
+    },
+    "bpc_board_bamboo_jungle_foil": {
+      "textures": "textures/blocks/pin_board/bamboo_jungle_foil"
+    },
+    "bpc_board_swamp": {
+      "textures": "textures/blocks/pin_board/swamp"
+    },
+    "bpc_board_swamp_foil": {
+      "textures": "textures/blocks/pin_board/swamp_foil"
+    },
+    "bpc_board_mangrove_swamp": {
+      "textures": "textures/blocks/pin_board/mangrove_swamp"
+    },
+    "bpc_board_mangrove_swamp_foil": {
+      "textures": "textures/blocks/pin_board/mangrove_swamp_foil"
+    },
+    "bpc_board_mushroom_fields": {
+      "textures": "textures/blocks/pin_board/mushroom_fields"
+    },
+    "bpc_board_mushroom_fields_foil": {
+      "textures": "textures/blocks/pin_board/mushroom_fields_foil"
+    },
+    "bpc_board_beach": {
+      "textures": "textures/blocks/pin_board/beach"
+    },
+    "bpc_board_beach_foil": {
+      "textures": "textures/blocks/pin_board/beach_foil"
+    },
+    "bpc_board_ocean": {
+      "textures": "textures/blocks/pin_board/ocean"
+    },
+    "bpc_board_ocean_foil": {
+      "textures": "textures/blocks/pin_board/ocean_foil"
+    },
+    "bpc_board_frozen_ocean": {
+      "textures": "textures/blocks/pin_board/frozen_ocean"
+    },
+    "bpc_board_frozen_ocean_foil": {
+      "textures": "textures/blocks/pin_board/frozen_ocean_foil"
+    },
+    "bpc_board_lush_caves": {
+      "textures": "textures/blocks/pin_board/lush_caves"
+    },
+    "bpc_board_lush_caves_foil": {
+      "textures": "textures/blocks/pin_board/lush_caves_foil"
+    },
+    "bpc_board_dripstone_caves": {
+      "textures": "textures/blocks/pin_board/dripstone_caves"
+    },
+    "bpc_board_dripstone_caves_foil": {
+      "textures": "textures/blocks/pin_board/dripstone_caves_foil"
+    },
+    "bpc_board_deep_dark": {
+      "textures": "textures/blocks/pin_board/deep_dark"
+    },
+    "bpc_board_deep_dark_foil": {
+      "textures": "textures/blocks/pin_board/deep_dark_foil"
+    },
+    "bpc_board_nether": {
+      "textures": "textures/blocks/pin_board/nether"
+    },
+    "bpc_board_nether_foil": {
+      "textures": "textures/blocks/pin_board/nether_foil"
+    },
+    "bpc_board_nether_forests": {
+      "textures": "textures/blocks/pin_board/nether_forests"
+    },
+    "bpc_board_nether_forests_foil": {
+      "textures": "textures/blocks/pin_board/nether_forests_foil"
+    },
+    "bpc_board_the_end": {
+      "textures": "textures/blocks/pin_board/the_end"
+    },
+    "bpc_board_the_end_foil": {
+      "textures": "textures/blocks/pin_board/the_end_foil"
+    },
+    "bpc_board_sulfur_caves": {
+      "textures": "textures/blocks/pin_board/sulfur_caves"
+    },
+    "bpc_board_sulfur_caves_foil": {
+      "textures": "textures/blocks/pin_board/sulfur_caves_foil"
+    },
+    "bpc_board_mystery": {
+      "textures": "textures/blocks/pin_board/mystery"
+    },
+    "bpc_board_ice_caves": {
+      "textures": "textures/blocks/pin_board/ice_caves"
+    },
+    "bpc_board_ice_caves_foil": {
+      "textures": "textures/blocks/pin_board/ice_caves_foil"
+    },
+    "bpc_board_fest_new_year": {
+      "textures": "textures/blocks/pin_board/fest_new_year"
+    },
+    "bpc_board_fest_songkran": {
+      "textures": "textures/blocks/pin_board/fest_songkran"
+    },
+    "bpc_board_fest_midyear": {
+      "textures": "textures/blocks/pin_board/fest_midyear"
+    },
+    "bpc_board_fest_halloween": {
+      "textures": "textures/blocks/pin_board/fest_halloween"
+    },
+    "bpc_board_empty": {
+      "textures": "textures/blocks/pin_board/empty"
+    },
+    "bpc_model_trophy_forests": {
+      "textures": "textures/blocks/models/trophy_forests"
+    },
+    "bpc_model_trophy_cold": {
+      "textures": "textures/blocks/models/trophy_cold"
+    },
+    "bpc_model_trophy_dry": {
+      "textures": "textures/blocks/models/trophy_dry"
+    },
+    "bpc_model_trophy_wet": {
+      "textures": "textures/blocks/models/trophy_wet"
+    },
+    "bpc_model_trophy_fields": {
+      "textures": "textures/blocks/models/trophy_fields"
+    },
+    "bpc_model_trophy_underground": {
+      "textures": "textures/blocks/models/trophy_underground"
+    },
+    "bpc_model_trophy_otherworld": {
+      "textures": "textures/blocks/models/trophy_otherworld"
+    },
+    "bpc_model_traveler_globe": {
+      "textures": "textures/blocks/models/traveler_globe"
+    },
+    "bpc_model_souvenir_snow_globe": {
+      "textures": "textures/blocks/models/souvenir_snow_globe"
+    },
+    "bpc_model_souvenir_cactus_pot": {
+      "textures": "textures/blocks/models/souvenir_cactus_pot"
+    },
+    "bpc_model_souvenir_shell_jar": {
+      "textures": "textures/blocks/models/souvenir_shell_jar"
+    },
+    "bpc_model_souvenir_golden_compass": {
+      "textures": "textures/blocks/models/souvenir_golden_compass"
+    },
+    "bpc_model_souvenir_stand": {
+      "textures": "textures/blocks/models/souvenir_stand"
+    },
+    "bpc_model_pin_board": {
+      "textures": "textures/blocks/models/pin_board"
+    }
+  }
+}

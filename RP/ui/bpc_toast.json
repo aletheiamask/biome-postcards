@@ -1,0 +1,1866 @@
+{
+  "namespace": "bpc_toast",
+  "flip": {
+    "anim_type": "flip_book",
+    "initial_uv": [
+      0,
+      0
+    ],
+    "frame_count": 8,
+    "frame_step": 80,
+    "fps": 8,
+    "easing": "linear"
+  },
+  "slide_in": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$title_fade_in_time",
+    "from": [
+      194,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@bpc_toast.slide_stay"
+  },
+  "slide_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@bpc_toast.slide_out"
+  },
+  "slide_out": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$title_fade_out_time",
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      194,
+      0
+    ]
+  },
+  "shine_wait": {
+    "anim_type": "wait",
+    "duration": "$title_fade_in_time",
+    "next": "@bpc_toast.shine_go"
+  },
+  "shine_go": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.7,
+    "from": [
+      -30,
+      0
+    ],
+    "to": [
+      174,
+      0
+    ]
+  },
+  "wrap": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$title_fade_in_time|default": 0.8,
+    "$title_stay_time|default": 4,
+    "$title_fade_out_time|default": 0.8,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": false,
+    "controls": [
+      {
+        "vanilla": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('bpc:' + #hud_title_text_string) - '§b§p§c') = ('bpc:' + #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "vanilla_title@hud.hud_title_text": {}
+            }
+          ]
+        }
+      },
+      {
+        "card_area@bpc_toast.card_area": {}
+      }
+    ]
+  },
+  "card_area": {
+    "type": "panel",
+    "size": [
+      164,
+      36
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [
+      -8,
+      26
+    ],
+    "layer": 40,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§b§p§c') = ('bpc:' + #hud_title_text_string)))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "card@bpc_toast.card": {}
+      }
+    ]
+  },
+  "card": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [
+      194,
+      0
+    ],
+    "anims": [
+      "@bpc_toast.slide_in"
+    ],
+    "controls": [
+      {
+        "body": {
+          "type": "panel",
+          "size": [
+            160,
+            32
+          ],
+          "clips_children": true,
+          "controls": [
+            {
+              "scene_bg@bpc_toast.scene_bg": {}
+            },
+            {
+              "shade": {
+                "type": "image",
+                "texture": "textures/bpc/toast/shade",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 2
+              }
+            },
+            {
+              "pics@bpc_toast.pics": {}
+            },
+            {
+              "name": {
+                "type": "label",
+                "size": [
+                  114,
+                  "default"
+                ],
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": true,
+                "localize": false,
+                "text": "#text",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  40,
+                  0
+                ],
+                "text_alignment": "left",
+                "layer": 4,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_type": "global",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            },
+            {
+              "scene_fg@bpc_toast.scene_fg": {}
+            },
+            {
+              "shine": {
+                "type": "image",
+                "texture": "textures/bpc/toast/shine",
+                "size": [
+                  24,
+                  32
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  -30,
+                  0
+                ],
+                "anims": [
+                  "@bpc_toast.shine_wait"
+                ],
+                "layer": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "frame": {
+          "type": "image",
+          "texture": "textures/bpc/toast/frame",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 7
+        }
+      },
+      {
+        "banner@bpc_toast.banner": {}
+      }
+    ]
+  },
+  "scene_bg": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "forests_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/forests_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cold_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/cold_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "dry_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/dry_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "wet_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/wet_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fields_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/fields_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "underground_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/underground_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "otherworld_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/otherworld_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mystery_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/mystery_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "festival_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/festival_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§8') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "reward_bg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/reward_bg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§9') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scene_fg": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5,
+    "controls": [
+      {
+        "forests_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/forests_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cold_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/cold_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "dry_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/dry_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "wet_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/wet_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fields_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/fields_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "underground_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/underground_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "otherworld_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/otherworld_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mystery_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/mystery_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "festival_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/festival_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§8') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "reward_fg": {
+          "type": "image",
+          "texture": "textures/bpc/toast/reward_fg",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "uv_size": [
+            80,
+            16
+          ],
+          "uv": "@bpc_toast.flip",
+          "disable_anim_fast_forward": true,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§t§9') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "pics": {
+    "type": "panel",
+    "size": [
+      32,
+      32
+    ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "layer": 3,
+    "controls": [
+      {
+        "pic_1": {
+          "type": "image",
+          "texture": "textures/items/postcards/plains",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_2": {
+          "type": "image",
+          "texture": "textures/items/postcards/forest",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_3": {
+          "type": "image",
+          "texture": "textures/items/postcards/flower_forest",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_4": {
+          "type": "image",
+          "texture": "textures/items/postcards/dark_forest",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_5": {
+          "type": "image",
+          "texture": "textures/items/postcards/pale_garden",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_6": {
+          "type": "image",
+          "texture": "textures/items/postcards/cherry_grove",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_7": {
+          "type": "image",
+          "texture": "textures/items/postcards/meadow",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_8": {
+          "type": "image",
+          "texture": "textures/items/postcards/dappled_forest",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§8') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_9": {
+          "type": "image",
+          "texture": "textures/items/postcards/taiga",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§0§9') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_10": {
+          "type": "image",
+          "texture": "textures/items/postcards/snowy_lands",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_11": {
+          "type": "image",
+          "texture": "textures/items/postcards/ice_spikes",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_12": {
+          "type": "image",
+          "texture": "textures/items/postcards/mountain_peaks",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_13": {
+          "type": "image",
+          "texture": "textures/items/postcards/windswept_hills",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_14": {
+          "type": "image",
+          "texture": "textures/items/postcards/desert",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_15": {
+          "type": "image",
+          "texture": "textures/items/postcards/savanna",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_16": {
+          "type": "image",
+          "texture": "textures/items/postcards/badlands",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_17": {
+          "type": "image",
+          "texture": "textures/items/postcards/jungle",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_18": {
+          "type": "image",
+          "texture": "textures/items/postcards/bamboo_jungle",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§8') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_19": {
+          "type": "image",
+          "texture": "textures/items/postcards/swamp",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§1§9') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_20": {
+          "type": "image",
+          "texture": "textures/items/postcards/mangrove_swamp",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_21": {
+          "type": "image",
+          "texture": "textures/items/postcards/mushroom_fields",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_22": {
+          "type": "image",
+          "texture": "textures/items/postcards/beach",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_23": {
+          "type": "image",
+          "texture": "textures/items/postcards/ocean",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_24": {
+          "type": "image",
+          "texture": "textures/items/postcards/frozen_ocean",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_25": {
+          "type": "image",
+          "texture": "textures/items/postcards/lush_caves",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_26": {
+          "type": "image",
+          "texture": "textures/items/postcards/dripstone_caves",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_27": {
+          "type": "image",
+          "texture": "textures/items/postcards/deep_dark",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_28": {
+          "type": "image",
+          "texture": "textures/items/postcards/nether",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§8') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_29": {
+          "type": "image",
+          "texture": "textures/items/postcards/nether_forests",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§2§9') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_30": {
+          "type": "image",
+          "texture": "textures/items/postcards/the_end",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_31": {
+          "type": "image",
+          "texture": "textures/items/postcards/sulfur_caves",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_32": {
+          "type": "image",
+          "texture": "textures/items/postcards/mystery",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_33": {
+          "type": "image",
+          "texture": "textures/items/postcards/ice_caves",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_34": {
+          "type": "image",
+          "texture": "textures/items/postcards/fest_new_year",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_35": {
+          "type": "image",
+          "texture": "textures/items/postcards/fest_songkran",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_36": {
+          "type": "image",
+          "texture": "textures/items/postcards/fest_midyear",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_37": {
+          "type": "image",
+          "texture": "textures/items/postcards/fest_halloween",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§3§7') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_80": {
+          "type": "image",
+          "texture": "textures/items/album",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§8§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_81": {
+          "type": "image",
+          "texture": "textures/blocks/decor/traveler_globe",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§8§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_82": {
+          "type": "image",
+          "texture": "textures/items/blank_postcard",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§8§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_90": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_forests",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§0') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_91": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_cold",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§1') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_92": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_dry",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§2') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_93": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_wet",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§3') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_94": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_fields",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§4') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_95": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_underground",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§5') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pic_96": {
+          "type": "image",
+          "texture": "textures/blocks/decor/trophy_otherworld",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((('bpc:' + #hud_title_text_string) - '§n§9§6') = ('bpc:' + #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "banner": {
+    "type": "image",
+    "texture": "textures/bpc/toast/banner_edge",
+    "keep_ratio": false,
+    "size": [
+      "100%c + 2px",
+      13
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [
+      2,
+      -5
+    ],
+    "layer": 8,
+    "controls": [
+      {
+        "fill": {
+          "type": "image",
+          "texture": "textures/bpc/toast/banner_fill",
+          "keep_ratio": false,
+          "size": [
+            "100%c + 8px",
+            11
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "text": {
+                "type": "label",
+                "size": [
+                  "default",
+                  10
+                ],
+                "color": [
+                  0.24,
+                  0.14,
+                  0.02
+                ],
+                "shadow": false,
+                "localize": false,
+                "text": "#text",
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_type": "global",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

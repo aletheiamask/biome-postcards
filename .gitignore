@@ -1,0 +1,7 @@
+node_modules/
+.dev/
+dist/
+*.mcaddon
+*.mcpack
+art/out/
+art/_data.px.js

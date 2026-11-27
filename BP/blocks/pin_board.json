@@ -1,0 +1,1154 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bpc:pin_board",
+      "menu_category": {
+        "category": "items"
+      },
+      "states": {
+        "bpc:page": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bpc:slot": {
+          "values": {
+            "min": 0,
+            "max": 15
+          }
+        },
+        "bpc:foil": [
+          false,
+          true
+        ]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [
+            "minecraft:cardinal_direction"
+          ],
+          "y_rotation_offset": 180
+        }
+      }
+    },
+    "components": {
+      "minecraft:geometry": {
+        "identifier": "geometry.bpc.pin_board",
+        "bone_visibility": {
+          "card": "q.block_state('bpc:page') != 0 || q.block_state('bpc:slot') != 0",
+          "pins": "!(q.block_state('bpc:page') != 0 || q.block_state('bpc:slot') != 0)"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bpc_model_pin_board",
+          "render_method": "alpha_test_single_sided"
+        },
+        "card": {
+          "texture": "bpc_board_empty",
+          "render_method": "alpha_test_single_sided"
+        }
+      },
+      "minecraft:collision_box": false,
+      "minecraft:selection_box": {
+        "origin": [
+          -8,
+          0,
+          6
+        ],
+        "size": [
+          16,
+          16,
+          2
+        ]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.4
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:map_color": "#b98a5a",
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "bpc:pin_board": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              180,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              90,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              270,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_plains",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_plains_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 2 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_forest",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 2 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_forest_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 3 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_flower_forest",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 3 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_flower_forest_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 4 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dark_forest",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 4 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dark_forest_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 5 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_pale_garden",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 5 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_pale_garden_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 6 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_cherry_grove",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 6 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_cherry_grove_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 7 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_meadow",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 7 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_meadow_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 8 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dappled_forest",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 8 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dappled_forest_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 9 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_taiga",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 9 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_taiga_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 10 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_snowy_lands",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 10 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_snowy_lands_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 11 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ice_spikes",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 11 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ice_spikes_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 12 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mountain_peaks",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 12 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mountain_peaks_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 13 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_windswept_hills",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 13 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_windswept_hills_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 14 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_desert",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 14 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_desert_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 15 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_savanna",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 0 && q.block_state('bpc:slot') == 15 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_savanna_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 0 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_badlands",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 0 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_badlands_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_jungle",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_jungle_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 2 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_bamboo_jungle",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 2 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_bamboo_jungle_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 3 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_swamp",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 3 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_swamp_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 4 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mangrove_swamp",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 4 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mangrove_swamp_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 5 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mushroom_fields",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 5 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mushroom_fields_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 6 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_beach",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 6 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_beach_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 7 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ocean",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 7 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ocean_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 8 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_frozen_ocean",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 8 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_frozen_ocean_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 9 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_lush_caves",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 9 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_lush_caves_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 10 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dripstone_caves",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 10 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_dripstone_caves_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 11 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_deep_dark",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 11 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_deep_dark_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 12 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_nether",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 12 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_nether_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 13 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_nether_forests",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 13 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_nether_forests_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 14 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_the_end",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 14 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_the_end_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 15 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_sulfur_caves",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 1 && q.block_state('bpc:slot') == 15 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_sulfur_caves_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_mystery",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ice_caves",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 1 && q.block_state('bpc:foil') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_ice_caves_foil",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_fest_new_year",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_fest_songkran",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_fest_midyear",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('bpc:page') == 2 && q.block_state('bpc:slot') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "bpc_model_pin_board",
+              "render_method": "alpha_test_single_sided"
+            },
+            "card": {
+              "texture": "bpc_board_fest_halloween",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

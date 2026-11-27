@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:trophy_forests",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_trophy_forests"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:trophy_forests.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:trophy_forests",
+        "replace_block_item": true
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "biome-postcards",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Biome Postcards - Minecraft Bedrock add-on by Tacoparoni",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --import ./test/setup.mjs --test --test-reporter=./test/reporter.mjs \"test/*.test.js\"",
+    "deploy": "node tools/deploy.mjs",
+    "bds": "node tools/bds.mjs",
+    "t": "node --import ./test/setup.mjs --test --test-reporter=./test/reporter.mjs"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.10.0",
+    "@minecraft/server-ui": "2.2.0",
+    "fflate": "^0.8.3",
+    "pngjs": "^7.0.0"
+  }
+}

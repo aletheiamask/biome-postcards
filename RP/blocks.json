@@ -1,0 +1,45 @@
+{
+  "format_version": "1.21.40",
+  "bpc:pin_board": {
+    "sound": "wood"
+  },
+  "bpc:souvenir_stand": {
+    "sound": "wood"
+  },
+  "bpc:trophy_forests": {
+    "sound": "stone"
+  },
+  "bpc:trophy_cold": {
+    "sound": "stone"
+  },
+  "bpc:trophy_dry": {
+    "sound": "stone"
+  },
+  "bpc:trophy_wet": {
+    "sound": "stone"
+  },
+  "bpc:trophy_fields": {
+    "sound": "stone"
+  },
+  "bpc:trophy_underground": {
+    "sound": "stone"
+  },
+  "bpc:trophy_otherworld": {
+    "sound": "stone"
+  },
+  "bpc:traveler_globe": {
+    "sound": "stone"
+  },
+  "bpc:souvenir_snow_globe": {
+    "sound": "stone"
+  },
+  "bpc:souvenir_cactus_pot": {
+    "sound": "stone"
+  },
+  "bpc:souvenir_shell_jar": {
+    "sound": "stone"
+  },
+  "bpc:souvenir_golden_compass": {
+    "sound": "stone"
+  }
+}

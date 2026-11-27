@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:trophy_cold",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_trophy_cold"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:trophy_cold.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:trophy_cold",
+        "replace_block_item": true
+      }
+    }
+  }
+}

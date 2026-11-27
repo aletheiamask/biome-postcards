@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "bpc:traveler_globe",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "bpc_traveler_globe"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "tile.bpc:traveler_globe.name"
+      },
+      "minecraft:block_placer": {
+        "block": "bpc:traveler_globe",
+        "replace_block_item": true
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bpc:souvenir_stand",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": {
+        "identifier": "geometry.bpc.souvenir_stand"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bpc_model_souvenir_stand",
+          "render_method": "alpha_test_single_sided"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:map_color": "#b98a5a",
+      "bpc:souvenir_stand": {}
+    }
+  }
+}

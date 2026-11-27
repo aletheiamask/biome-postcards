@@ -1,0 +1,24 @@
+{
+  "namespace": "hud",
+  "root_panel": {
+    "modifications": [
+      {
+        "control_name": "hud_title_text_area",
+        "operation": "replace",
+        "value": [
+          {
+            "hud_title_text_area": {
+              "type": "panel",
+              "factory": {
+                "name": "hud_title_text_factory",
+                "control_ids": {
+                  "hud_title_text": "hud_title_text@bpc_toast.wrap"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

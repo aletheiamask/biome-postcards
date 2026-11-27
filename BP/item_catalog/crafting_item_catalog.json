@@ -1,0 +1,109 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "items": [
+              "bpc:album",
+              "bpc:blank_postcard",
+              "bpc:pin_board",
+              "bpc:souvenir_stand",
+              "bpc:trophy_forests",
+              "bpc:trophy_cold",
+              "bpc:trophy_dry",
+              "bpc:trophy_wet",
+              "bpc:trophy_fields",
+              "bpc:trophy_underground",
+              "bpc:trophy_otherworld",
+              "bpc:traveler_globe",
+              "bpc:souvenir_snow_globe",
+              "bpc:souvenir_cactus_pot",
+              "bpc:souvenir_shell_jar",
+              "bpc:souvenir_golden_compass"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "bpc:postcard_plains",
+              "name": "bpc:itemGroup.name.postcards"
+            },
+            "items": [
+              "bpc:postcard_plains",
+              "bpc:postcard_plains_foil",
+              "bpc:postcard_forest",
+              "bpc:postcard_forest_foil",
+              "bpc:postcard_flower_forest",
+              "bpc:postcard_flower_forest_foil",
+              "bpc:postcard_dark_forest",
+              "bpc:postcard_dark_forest_foil",
+              "bpc:postcard_pale_garden",
+              "bpc:postcard_pale_garden_foil",
+              "bpc:postcard_cherry_grove",
+              "bpc:postcard_cherry_grove_foil",
+              "bpc:postcard_meadow",
+              "bpc:postcard_meadow_foil",
+              "bpc:postcard_dappled_forest",
+              "bpc:postcard_dappled_forest_foil",
+              "bpc:postcard_taiga",
+              "bpc:postcard_taiga_foil",
+              "bpc:postcard_snowy_lands",
+              "bpc:postcard_snowy_lands_foil",
+              "bpc:postcard_ice_spikes",
+              "bpc:postcard_ice_spikes_foil",
+              "bpc:postcard_mountain_peaks",
+              "bpc:postcard_mountain_peaks_foil",
+              "bpc:postcard_windswept_hills",
+              "bpc:postcard_windswept_hills_foil",
+              "bpc:postcard_desert",
+              "bpc:postcard_desert_foil",
+              "bpc:postcard_savanna",
+              "bpc:postcard_savanna_foil",
+              "bpc:postcard_badlands",
+              "bpc:postcard_badlands_foil",
+              "bpc:postcard_jungle",
+              "bpc:postcard_jungle_foil",
+              "bpc:postcard_bamboo_jungle",
+              "bpc:postcard_bamboo_jungle_foil",
+              "bpc:postcard_swamp",
+              "bpc:postcard_swamp_foil",
+              "bpc:postcard_mangrove_swamp",
+              "bpc:postcard_mangrove_swamp_foil",
+              "bpc:postcard_mushroom_fields",
+              "bpc:postcard_mushroom_fields_foil",
+              "bpc:postcard_beach",
+              "bpc:postcard_beach_foil",
+              "bpc:postcard_ocean",
+              "bpc:postcard_ocean_foil",
+              "bpc:postcard_frozen_ocean",
+              "bpc:postcard_frozen_ocean_foil",
+              "bpc:postcard_lush_caves",
+              "bpc:postcard_lush_caves_foil",
+              "bpc:postcard_dripstone_caves",
+              "bpc:postcard_dripstone_caves_foil",
+              "bpc:postcard_deep_dark",
+              "bpc:postcard_deep_dark_foil",
+              "bpc:postcard_nether",
+              "bpc:postcard_nether_foil",
+              "bpc:postcard_nether_forests",
+              "bpc:postcard_nether_forests_foil",
+              "bpc:postcard_the_end",
+              "bpc:postcard_the_end_foil",
+              "bpc:postcard_sulfur_caves",
+              "bpc:postcard_sulfur_caves_foil",
+              "bpc:postcard_mystery",
+              "bpc:postcard_ice_caves",
+              "bpc:postcard_ice_caves_foil",
+              "bpc:postcard_fest_new_year",
+              "bpc:postcard_fest_songkran",
+              "bpc:postcard_fest_midyear",
+              "bpc:postcard_fest_halloween"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

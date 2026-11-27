@@ -1,0 +1,622 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.bpc.pin_board",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [
+          0,
+          0.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "board",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                15,
+                6.5
+              ],
+              "size": [
+                16,
+                1,
+                1.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    36
+                  ],
+                  "uv_size": [
+                    3,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    34
+                  ],
+                  "uv_size": [
+                    32,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    3,
+                    36
+                  ],
+                  "uv_size": [
+                    3,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    32,
+                    31
+                  ],
+                  "uv_size": [
+                    -32,
+                    -3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    64,
+                    31
+                  ],
+                  "uv_size": [
+                    -32,
+                    -3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -8,
+                0,
+                6.5
+              ],
+              "size": [
+                16,
+                1,
+                1.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    60
+                  ],
+                  "uv_size": [
+                    64,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    6,
+                    36
+                  ],
+                  "uv_size": [
+                    3,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    32,
+                    34
+                  ],
+                  "uv_size": [
+                    32,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    9,
+                    36
+                  ],
+                  "uv_size": [
+                    3,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    32,
+                    34
+                  ],
+                  "uv_size": [
+                    -32,
+                    -3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    64,
+                    34
+                  ],
+                  "uv_size": [
+                    -32,
+                    -3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -8,
+                1,
+                6.5
+              ],
+              "size": [
+                1,
+                14,
+                1.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    4
+                  ],
+                  "uv_size": [
+                    4,
+                    56
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    28,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    28
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    40,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    28
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    31,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    28
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                7,
+                1,
+                6.5
+              ],
+              "size": [
+                1,
+                14,
+                1.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    60,
+                    4
+                  ],
+                  "uv_size": [
+                    4,
+                    56
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    34,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    28
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    42,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    28
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    37,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    28
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -7,
+                1,
+                7.5
+              ],
+              "size": [
+                14,
+                14,
+                0.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    4,
+                    4
+                  ],
+                  "uv_size": [
+                    56,
+                    56
+                  ],
+                  "material_instance": "card"
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    28,
+                    28
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "card",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6,
+                2.5,
+                7
+              ],
+              "size": [
+                12,
+                10.5,
+                0.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    8,
+                    12
+                  ],
+                  "uv_size": [
+                    48,
+                    42
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    8,
+                    12
+                  ],
+                  "uv_size": [
+                    2,
+                    42
+                  ],
+                  "material_instance": "card"
+                },
+                "west": {
+                  "uv": [
+                    54,
+                    12
+                  ],
+                  "uv_size": [
+                    2,
+                    42
+                  ],
+                  "material_instance": "card"
+                },
+                "up": {
+                  "uv": [
+                    56,
+                    54
+                  ],
+                  "uv_size": [
+                    -48,
+                    -2
+                  ],
+                  "material_instance": "card"
+                },
+                "down": {
+                  "uv": [
+                    56,
+                    54
+                  ],
+                  "uv_size": [
+                    -48,
+                    -2
+                  ],
+                  "material_instance": "card"
+                }
+              }
+            },
+            {
+              "origin": [
+                -0.5,
+                13,
+                6.75
+              ],
+              "size": [
+                1,
+                1,
+                0.75
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    30,
+                    8
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    30,
+                    8
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "west": {
+                  "uv": [
+                    30,
+                    8
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "up": {
+                  "uv": [
+                    34,
+                    12
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                },
+                "down": {
+                  "uv": [
+                    34,
+                    12
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "pins",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                11.5,
+                6.75
+              ],
+              "size": [
+                1,
+                1,
+                0.75
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    16,
+                    14
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    16,
+                    14
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "west": {
+                  "uv": [
+                    16,
+                    14
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "up": {
+                  "uv": [
+                    20,
+                    18
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                },
+                "down": {
+                  "uv": [
+                    20,
+                    18
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                }
+              }
+            },
+            {
+              "origin": [
+                3,
+                5,
+                6.75
+              ],
+              "size": [
+                1,
+                1,
+                0.75
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    44,
+                    40
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "east": {
+                  "uv": [
+                    44,
+                    40
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "west": {
+                  "uv": [
+                    44,
+                    40
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ],
+                  "material_instance": "card"
+                },
+                "up": {
+                  "uv": [
+                    48,
+                    44
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                },
+                "down": {
+                  "uv": [
+                    48,
+                    44
+                  ],
+                  "uv_size": [
+                    -4,
+                    -4
+                  ],
+                  "material_instance": "card"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

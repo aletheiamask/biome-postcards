@@ -1,0 +1,68 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Biome Postcards",
+    "description": "Collect a postcard from every biome. By Tacoparoni (Marwin5411-Winner, pipothai).",
+    "uuid": "f4e07b0c-b0fd-4c76-8a82-0a080ce25151",
+    "version": [
+      1,
+      0,
+      1
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "f44f466f-c5cc-4d65-8035-3958c47b2c34",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "94535f60-90b8-4d01-a624-f16580db4f83",
+      "entry": "scripts/main.js",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "258846a1-89e5-4570-b214-12c8796aa681",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.10.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.2.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Tacoparoni",
+      "Marwin5411-Winner",
+      "pipothai"
+    ],
+    "license": "All Rights Reserved",
+    "url": "https://tarcoparoni.ropmuang.workers.dev/biome-postcards",
+    "product_type": "addon"
+  }
+}
